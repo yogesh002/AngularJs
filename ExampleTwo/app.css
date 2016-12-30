@@ -1,0 +1,65 @@
+/* ------------------------------------------------------------------------------
+Style Sheet related to a simple AngularJs application that performs addition 
+
+last modified: 12.29.2016 by Yogesh Ghimire
+author: Yogesh Ghimire
+----------------------------------------------------------------------------------*/
+
+#title {
+    text-align: center;
+    font-weight: bolder;
+    color: red;
+    font-size: 2.5em;
+    padding: 30px;
+    margin: 0px;
+}
+
+.inputbox {
+    width: 350px;
+    display: block;
+    padding: 20px;
+    margin: 15px auto 15px auto;
+}
+
+#button {
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    padding: 10px 55px 10px 55px;
+}
+
+#button:hover {
+    background-color: darkseagreen;
+    color: blue;
+}
+
+#body {
+    border: 1px solid grey;
+    width: 60%;
+    margin: 5% auto 15px auto;
+}
+
+#resultText {
+    text-align: center;
+    color: green;
+}
+
+#resultText>span {
+    color: red;
+}
+
+::-webkit-input-placeholder {
+    color: F0F0F0;
+}
+
+::-moz-placeholder {
+    color: F0F0F0;
+}
+
+:-ms-input-placeholder {
+    color: F0F0F0;
+}
+
+:-moz-placeholder {
+    color: F0F0F0;
+}
