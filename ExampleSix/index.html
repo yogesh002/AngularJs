@@ -14,14 +14,15 @@
 </head>
 
 <body ng-controller="useFilterService" id="filterBody">
-    <aside>Today's date is: {{date}}</aside>
+    <div>Today's date is: {{date}}</div>
     <h1>{{title}}</h1>
     <h3>{{content}}</h3>
     <p>An alternate use of filter is from HTML itself using pipe sign like: </p>
-    <h4>{{additionalInfo | lowercase}}</h4> </body>
-<p>Example of currency filter function is:</p>
-<p> Today's gas price in Warrensburg, Missouri at Break Time gas station is : {{gasAmount | currency}} </p>
-<p>What if we need three decimal values and gas price has to be in Nepali Rupee? Use custom argumets provided by AngularJs :</p>
-<p> {{gasAmountInNepaliRupee | currency : "NRS. ": 3}}</p>
+    <h4>{{additionalInfo | lowercase}}</h4>
+    <p>Example of currency filter function is:</p>
+    <p> Today's gas price in Warrensburg, Missouri at Break Time gas station is : {{gasAmount | currency}} </p>
+    <p>What if we need three decimal values and gas price has to be in Nepali Rupee? Use custom argumets provided by AngularJs :</p>
+    <p> {{gasAmountInNepaliRupee | currency : "NRS. ": 3}}</p>
+</body>
 
 </html>
