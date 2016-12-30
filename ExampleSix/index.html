@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="filterApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Filters in AngularJs</title>
+</head>
+
+<body ng-controller="useFilterService" id="filterBody">
+    <aside>Today's date is: {{date}}</aside>
+    <h1>{{title}}</h1>
+    <h3>{{content}}</h3>
+    <p>An alternate use of filter is from HTML itself using pipe sign like: </p>
+    <h4>{{additionalInfo | lowercase}}</h4> </body>
+<p>Example of currency filter function is:</p>
+<p> Today's gas price in Warrensburg, Missouri at Break Time gas station is : {{gasAmount | currency}} </p>
+<p>What if we need three decimal values and gas price has to be in Nepali Rupee? Use custom argumets provided by AngularJs :</p>
+<p> {{gasAmountInNepaliRupee | currency : "NRS. ": 3}}</p>
+
+</html>
