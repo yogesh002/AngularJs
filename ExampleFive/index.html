@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="expressionApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Expressions and Interpolation in AngularJs">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <script src="app.js"></script>
+    <title>Addition</title>
+</head>
+
+<body ng-controller="expressionController">
+    <h1 id="title">Expressions and Interpolation in AngularJs</h1>
+    <div class="content"> Type the current state of the cat as either <span class="highlight">'hiding'</span> or <span class="highlight">'playing'</span>. Do not type ".jpg". Once you type that state, click on the image. Note: if you provide in all capital letters, the <span class="highlight">"filter"</span> scope of angularJs will convert those letters into lower case as written in javascript file. </div>
+    <div class="content">
+        <input type="text" ng-model="inputState" /> </div>
+    <div class="content"><img ng-click="switchState();" src="image/cat{{inputState}}" alt="CLICK ME AFTER TYPING MY STATE!!" /></div>
+    <div class="content">Your input is: <span class="highlight">{{inputState}}</span> </div>
+    <div class="content">The image switches its state. If you mention - playing, it hides and vice-versa.</div>
+    <div class="content">Click on the image to switch between images.</div>
+</body>
+
+</html>
