@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myFirstAngularApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Web Development with AngularJs 1</title>
+</head>
+<body>    
+    <div ng-controller="myFirstAngularController">
+        My name is: <input type="text" ng-model="name"/>
+        <p>{{askName()}}</p>
+        <p>Hello. My name is : {{name}}. If I make any change inside the input box below, it is reflected in the paragraph tag above due to 
+        <strong>declarative binding </strong> property of <strong>ViewModel</strong> with that of <strong>View</strong> provided by AngularJs.
+        </p>
+        <br>
+     </div>
+</body>
+</html>
