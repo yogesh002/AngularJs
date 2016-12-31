@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="angularBindingTypesApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Types of Binding in AngularJs</title>
+</head>
+
+<body>
+    <div ng-controller="angularBindingTypesController">
+        <p>Check for the number of watchers: {{numberOfWatchers}}
+            <input type="button" value="Number of Watchers" ng-click="getNumberOfWatchers();" /> </p>
+        <p>This is <strong>Two Way Binding</strong> in angularJs:
+            <input type="text" ng-model="result" />
+            <!--NOTE: ng-model is two-way binding because any change in ViewModel or Javascript gets changed int he UI and viceversa-->
+        </p>
+        <p>This is <strong>One Way Binding in AngularJs:</strong> You just entered : {{result}} </p>
+        <!--NOTE: interpolation is one way binding because any changes in the property of ViewModel i.e $scope will be reflected in UI. You cant change from UI to ViewModel like in case of Two way binding as mentioned above. Watchers still remain, so digest loop continues.-->
+        <p> This is <strong>One Time Binding in AngularJs: </strong> Enter Phone Number:</p>
+        <p>
+            <input type="text" ng-model="phoneNumber"> </p>
+        <p> You enterd as: {{phoneNumber}}</p>
+        <p>
+            <input type="button" value="GetPhone" ng-click="getPhoneNumber();"> {{::clientPhoneNumber}} </p>
+        <!--<strong>One Time Binding</strong> are used for initialization in ViewModel. Once initialize, you cannot change the value. The watchers are removed, so digest cycle will not detect this binding. This is used for optimization/performance. Try changing the value in the input box for this particular input box, it will not update in the UI. This is one time binding. Click 'number of watchers' button in the beginning. It shows e.g - 6. Then once you click get phone, you initialize the one time biding property. So, watchers will be gone. Click again 'number of watchers' button. You must see 5 watchers now.--></div>
+</body>
+
+</html>
