@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="customFilterApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Custom Filters in AngularJs</title>
+</head>
+
+<body ng-controller="customFilterController"> </body>
+<input type="text" ng-model="input" />
+<br>
+<input type="button" value="Click" ng-click="reverseItNow();" />
+<h1>Two custom filters are used to 1) Reverse 2) capitalize every second letter of the following input letters : {{input |replaceLastCharWithNumber: "---You entered ----- ":"-------The following was the output"}} for input {{input}}</h1>
+
+</html>
