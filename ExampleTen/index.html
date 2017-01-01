@@ -22,6 +22,10 @@
             <li ng-repeat="phpCountry in allPhpCountries ">{{phpCountry}}</li>
         </ul>
     </div>
+    <div>
+        <p ng-repeat="_country in countriesList | filter:input">{{_country}}</p>
+        <!--Alternative way of using a filter. This one doesnot need filter()-->
+    </div>
     <datalist id="countries ">
         <!--Populate Datalist with data from javascript -->
         <option ng-repeat="country in countriesList">{{country}}</option>
