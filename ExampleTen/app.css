@@ -1,0 +1,19 @@
+/*
+*@author Yogesh Ghimire
+*
+*/
+
+.countryBlock {
+    margin: 0 auto;
+    height: 500px;
+    width: 30%;
+}
+
+.countryBlock > ul {
+    height: 45%;
+    overflow: scroll;
+}
+
+#text_area {
+    float: right;
+}

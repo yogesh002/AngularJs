@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="searchCountryApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <title>Search Functionality using Filter Functionality provided by AngularJs</title>
+</head>
+
+<body ng-controller="searchCountryController">
+    <h1>Search Functionality Using AngularJs</h1>
+    <input list="countries" ng-model="input" ng-change="getCountries();">
+    <div class="countryBlock ">PHP countries :
+        <ul>
+            <!--Display country based on user search -->
+            <li ng-repeat="phpCountry in allPhpCountries ">{{phpCountry}}</li>
+        </ul>
+    </div>
+    <datalist id="countries ">
+        <!--Populate Datalist with data from javascript -->
+        <option ng-repeat="country in countriesList">{{country}}</option>
+    </datalist>
+</body>
+
+</html>
