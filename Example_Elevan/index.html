@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="groceryApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yogesh Ghimire">
+    <script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="nativejs.js"></script>
+    <script src="app.json"></script>
+    <title>A simple Grocery Store Application in AngularJs</title>
+</head>
+
+<body ng-controller="groceryController"> <a id="link" href="#" onclick="showmistakes();">Show my mistakes...</a>
+    <aside id="aside" style="display: none">
+        <ul>Mistakes I made while making this application:
+            <li>1. item.selected =! item.selected. NOTE: != vs =! as the latter used for toggle</li>
+            <li>2. Create a new object as {} instead of array in javascript file. Then push it to json data </li>
+            <li> <a href="http://stackoverflow.com/questions/41454973/angularjs-checkbox-not-functioning-properly"><strong>Stackoverflow link</strong> related to my issues</a> </li>
+        </ul>
+    </aside>
+    <h1>Welcome to my Grocery Store</h1>
+    <p>Select your items from the options below.</p>
+    <div ng-repeat="item in groceryCollection">
+        <input type="checkbox" id="{{item.name}}" value="{{item.name}}" ng-checked="item.selected" ng-click="item.selected =! item.selected">
+        <label for="{{item.name}}">{{item.name}}</label>
+        <input type="number" step="1" min="0" max="5" placeholder="Quantity" /> </div>
+    <p>
+        <input type="checkbox" id="others">
+        <label for="others">Others</label>
+    </p>
+    <p>Please Enter your item if not displayed in the list above:</p>
+    <p id="extraItems"> <span><input type="text" placeholder="Please Enter your Item" ng-model="customItem"/></span> <span><input type="text" placeholder="Please Enter your Item Type" ng-model="customItemType"/></span> <span><input type="number" step="1" min="0" max="5" placeholder="Quantity" /></span> </p>
+    <p>
+        <input type="button" value="Add Item" ng-click="addItem(customItem, customItemType);" /> </p>
+    <p> <a href="#">Add more items</a> </p>
+    <div>
+        <p>Your selected items:</p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+            <tr ng-repeat="selection in groceryCollection | filter: {selected:true}">
+                <td>{{selection.name}}</td>
+                <td>{{selection.type}}</td>
+                <td>{{selection.quantity}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

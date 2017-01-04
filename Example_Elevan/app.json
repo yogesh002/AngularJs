@@ -1,0 +1,19 @@
+/*
+ *@author - Yogesh Ghimire
+ */
+groceryCollection_JSON = [{
+    "name": "Tomato"
+    , "type": "Roma"
+  }, {
+    "name": "Cauliflower"
+    , "type": "Organic"
+  }, {
+    "name": "Apple"
+    , "type": "Gala"
+  }, {
+    "name": "Orange"
+    , "type": "Sweet n' Sour"
+  }, {
+    "name": "Grapes"
+    , "type": "Wild"
+  }];
