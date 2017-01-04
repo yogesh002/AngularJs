@@ -15,6 +15,8 @@
 
 <body ng-controller="searchCountryController">
     <h1>Search Functionality Using AngularJs</h1>
+    <p>Here is the link to StackOverflow for where I made mistakes and corrected it:</p>
+    <p><a href="http://stackoverflow.com/questions/41412708/type-string-to-search-from-an-array-of-string-but-what-is-causing-to-require-wh/41412789?noredirect=1#comment70029441_41412789">StackOverFlow link</a></p>
     <input list="countries" ng-model="input" ng-change="getCountries();">
     <div class="countryBlock ">PHP countries :
         <ul>
@@ -24,7 +26,7 @@
     </div>
     <div>
         <p ng-repeat="_country in countriesList | filter:input">{{_country}}</p>
-        <!--Alternative way of using a filter. This one doesnot need filter()-->
+        <!--Alternative way of using a filter. This one doesnot need filter() -->
     </div>
     <datalist id="countries ">
         <!--Populate Datalist with data from javascript -->
