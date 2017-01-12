@@ -4,16 +4,21 @@
 groceryCollection_JSON = [{
     "name": "Tomato"
     , "type": "Roma"
+    , "quantity":0
   }, {
     "name": "Cauliflower"
     , "type": "Organic"
+     , "quantity":0
   }, {
     "name": "Apple"
     , "type": "Gala"
+     , "quantity":0
   }, {
     "name": "Orange"
     , "type": "Sweet n' Sour"
+     , "quantity":0
   }, {
     "name": "Grapes"
     , "type": "Wild"
+     , "quantity":0
   }];

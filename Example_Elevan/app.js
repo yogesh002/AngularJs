@@ -8,13 +8,13 @@
 
     function groceryControllerFunction($scope, $filter) {
         $scope.groceryCollection = groceryCollection_JSON;
-        $customItem = 0;
-        customItemType = "";
-        $scope.addItem = function (item, type) {
+        
+        $scope.addItem = function (item, type, quantity) {
             var items = {};
             items['name'] = item;
             items['type'] = type;
-            items['selected'] = false;
+            items['quantity'] = quantity;
+            items['selected'] = false; //As soon as you add, do you want to select it or not? If yes, make it true. 
             $scope.groceryCollection.push(items);
             console.log($scope.groceryCollection);
             return $scope.groceryCollection;
