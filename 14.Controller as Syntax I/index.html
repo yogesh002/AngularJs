@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="nestedControllerApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Using 'as' keyword for nested Controllers </title>
+</head>
+
+<body>
+    <div ng-controller="parentController as parent">
+        <!-- both parent and child controllers properties being called inside child controller-->
+        <div ng-controller="childController as child">Child Value: {{child.name}}
+            <br>Parent value is: {{parent.name}}</div>
+    </div>
+</body>
+
+</html>

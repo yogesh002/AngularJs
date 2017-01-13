@@ -1,0 +1,54 @@
+var travelPackage = [
+    {
+        name: "Albania"
+        , price: 5000
+        }
+        , {
+        name: "Bermuda"
+        , price: 2000
+        }
+
+        , {
+        name: "Bhutan"
+        , price: 1000
+        }
+        , {
+        name: "Bolivia"
+        , price: 1000
+        }
+        , {
+        name: "Bosnia and Herzegowina"
+        , price: 3000
+        }
+        , {
+        name: "Botswana"
+        , price: 1000
+        }
+        , {
+        name: "Bouvet Island"
+        , price: 2300
+        }
+        , {
+        name: "Brazil"
+        , price: 2100
+        }
+        , {
+        name: "Western Sahara"
+        , price: 1900
+        }
+        , {
+        name: "Yemen"
+        , price: 1100
+        }
+        , {
+        name: "Yugoslavia"
+        , price: 1200
+        }
+        , {
+        name: "Zambia"
+        , price: 1600
+        }
+        , {
+        name: "Zimbabwe"
+        , price: 1421
+        }];
