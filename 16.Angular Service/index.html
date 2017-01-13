@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="countriesAndTravelApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="app.json"></script>
+    <title>Angular Service</title>
+</head>
+
+<body>
+    <div ng-controller="travelController as travelDiaries">
+        <h1>Angular Service implemented Example</h1>
+        <h3>List of Countries I wish to travel</h3>
+        <ul>
+            <li ng-repeat="option in travelDiaries.option | limitTo: travelDiaries.totalView ">{{$index + 1}}. I want to visit {{option.name}} for {{option.price | currency}}
+                <input type="button" value="Remove" ng-click="travelDiaries.removeCountry($index);"> </li>
+        </ul>
+        <input type="text" ng-model="travelDiaries.countryName" placeholder="Enter Country Name">
+        <input type="text" ng-model="travelDiaries.price" placeholder="Enter Price">
+        <br>
+        <input type="button" value="Add Package" ng-click="travelDiaries.addPackage();"> </div>
+    <div ng-controller="displayCountriesController as travelled">
+        <h1>Already Visited Countries :</h1>
+        <ul>
+            <li ng-repeat="visitedCountries in travelled.visitedCountries">I already visited {{visitedCountries.name}} with package {{visitedCountries.price | currency }} </li>
+        </ul>
+    </div>
+</body>
+
+</html>
