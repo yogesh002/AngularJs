@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="serviceProviderApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Service Provider and Config</title>
+</head>
+
+<body>
+    <div ng-controller="asianCountriesController as asiaTravel">
+	<h1>Angular Service Provider and Config</h1>
+        <input type="text" placeholder="Country Name" ng-model="asiaTravel.countryName">
+        <input type="text" placeholder="Country Price" ng-model="asiaTravel.countryPrice">
+        <input type="button" value="Add Asian Countries" ng-click="asiaTravel.addCountry();">
+        <ul>
+            <li ng-repeat="asianCountry in asiaTravel.displayCountries"> Country Name : {{asianCountry.name}} and Price is : {{asianCountry.price}} </li>
+        </ul>
+        <div ng-if="asiaTravel.errorMessage !=null"> {{asiaTravel.errorMessage}} </div>
+    </div>
+</body>
+
+</html>
