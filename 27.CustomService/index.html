@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="customServiceApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Custom Angular Service</title>
+</head>
+
+<body>
+    <div ng-controller="asianCountriesController as asiaTravel">
+        <input type="text" placeholder="Country Name" ng-model="asiaTravel.countryName">
+        <input type="text" placeholder="Country Price" ng-model="asiaTravel.countryPrice">
+        <input type="button" value="Add Asian Countries" ng-click="asiaTravel.addCountry();">
+        <ul>
+            <li ng-repeat="asianCountry in asiaTravel.displayCountries"> Country Name : {{asianCountry.name}} and Price is : {{asianCountry.price}} </li>
+        </ul>
+        <div ng-show = {{asiaTravel.errorMessage !=null}}> {{asiaTravel.errorMessage}} </div>
+    </div>
+    <div ng-controller="westernCountriesController as westTravel">
+        <input type="text" placeholder="Country Name" ng-model="westTravel.countryName">
+        <input type="text" placeholder="Country Price" ng-model="westTravel.countryPrice">
+        <input type="button" value="Add Western Countries" ng-click="westTravel.addCountry();">
+        <div ng-repeat="westernCountry in westTravel.showAllCountries"> Western country selected is: {{westernCountry.name}} and the price is : {{westernCountry.price}} </div>
+        <div ng-show = {{westTravel.errorMessage !=null}}> {{westTravel.errorMessage}} </div>
+    </div>
+</body>
+
+</html>
