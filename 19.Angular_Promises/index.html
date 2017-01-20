@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="promisesApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Promises in AngularJs</title>
+</head>
+
+<body ng-controller="promisesController as promisesCtrller">
+    <input type="text" ng-model="promisesCtrller.countryName" placeholder="Enter Country Name">
+    <input type="text" ng-model="promisesCtrller.price" placeholder="Enter Price">
+    <input type="button" value="Add" ng-click="promisesCtrller.addCountry();">
+    <ol ng-repeat="country in promisesCtrller.showCountries">
+        Country is : {{country.name}} and price is {{country.price}} 
+        <input type="button" value="Remove Country" ng-click="promisesCtrller.removeCountry($index);">
+    </ol>
+</body>
+
+</html>
