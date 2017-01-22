@@ -10,7 +10,7 @@
         .controller("httpServiceController", httpServiceControllerFunction)
         .service("itemDetailsService", displayItemDescriptionService)
         .service("displayAllItemsService", displayAllItemsServiceFunction)
-        .constant("BaseUrl", "http://davids-restaurant.herokuapp.com/"); //declare a constant 
+        .constant("BaseUrl", "https://davids-restaurant.herokuapp.com/"); //declare a constant 
 
     displayAllItemsServiceFunction.$inject = ["$http", "BaseUrl"]; //dependency injection
     function displayAllItemsServiceFunction($http, BaseUrl) {

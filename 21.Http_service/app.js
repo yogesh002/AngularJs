@@ -8,10 +8,9 @@
     angular.module("httpServiceApp", [])
         .controller("httpServiceController", httpServiceControllerFunction)
         .factory("httpServiceFactory", httpServiceFactoryFunction) //define a factory
-        .constant("baseUrl", "http://davids-restaurant.herokuapp.com/");
+        .constant("baseUrl", "https://davids-restaurant.herokuapp.com/");
     
-    httpServiceFactoryFunction.$inject = ["$http"] //inject $http in factory so it becomes available in service
-    function httpServiceFactoryFunction($http) {
+    function httpServiceFactoryFunction() {
         var result = function () {
             return new httpService(); //pass  url and $http service in all services we create
         }
