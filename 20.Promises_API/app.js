@@ -40,8 +40,8 @@
             return deferred.promise;
         }
     }
-    selectCountryServiceFunction.$inject = ["countryFilterService"] //inject the helper service to the service
-    function selectCountryServiceFunction(countryFilterService) {
+    selectCountryServiceFunction.$inject = ["countryFilterService", "$q"] //inject the helper service to the service
+    function selectCountryServiceFunction(countryFilterService, $q) {
         var service = this;
         var countries = [{
             name: "Nepal"
@@ -53,23 +53,23 @@
             name: "India"
             , price: 1000
         }];
+        //These are the changes from previous example
         service.addCountry = function (country, price) {
-            countryFilterService.logMessage = null; //setting empty message on each click of add button
-            var promise = countryFilterService.filterCountryName(countries, country);
-            promise.then(function (resolvedObj) {
-                var anotherPromise = countryFilterService.filterPrice(price);
-                anotherPromise.then(function () {
-                    console.log(resolvedObj.message);
+            var promise = countryFilterService.filterCountryName(countries, country); //promise 1
+            var anotherPromise = countryFilterService.filterPrice(price); //promise 2
+            var addCountry = function (country, price) {
                     var newCountry = {
                         name: country
                         , price: price
                     }
                     countries.push(newCountry);
-                }, function (deferredObj) {
-                    console.log(deferredObj.message);
-                })
-            }, function (rejectedObj) {
-                console.log(rejectedObj.message);
+                }
+                //pass array of promises
+            $q.all([promise, anotherPromise]).then(function (result) { //This is for parallel execution. One promise cancels another promise if it fails. 
+                addCountry(country, price);
+                console.log(result);
+            }).catch(function (errorMessage) {
+                console.log(errorMessage.message);
             });
         }
         service.displayAllCountries = function () {

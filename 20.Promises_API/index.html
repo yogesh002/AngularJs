@@ -9,19 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-    <title>Promises in AngularJs</title>
+    <title>A better way to write Promises in AngularJs</title>
 </head>
 
 <body ng-controller="promisesController as promisesCtrller">
 	<h1>Promises in AngularJs</h1>
-	<h3>NOTE: This approach is not much efficient. $q.all approach mentioned in next example is more efficient. However, this example illustrates the concepts in Angular Promises</h3>
+    <h3>Using <strong>$q.all</strong> to execute multiple promises together.<br>
+    If a promise fails, it will cancel the execution immediately.</h3>
     <input type="text" ng-model="promisesCtrller.countryName" placeholder="Enter Country Name">
     <input type="text" ng-model="promisesCtrller.price" placeholder="Enter Price">
     <input type="button" value="Add" ng-click="promisesCtrller.addCountry();">
-    <ol ng-repeat="country in promisesCtrller.showCountries">
-        Country is : {{country.name}} and price is {{country.price}} 
-        <input type="button" value="Remove Country" ng-click="promisesCtrller.removeCountry($index);">
-    </ol>
+    <ol ng-repeat="country in promisesCtrller.showCountries"> Country is : {{country.name}} and price is {{country.price}}
+        <input type="button" value="Remove Country" ng-click="promisesCtrller.removeCountry($index);"> </ol>
 </body>
 
 </html>
