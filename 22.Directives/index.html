@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="directiveApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Directives in AngularJs</title>
+</head>
+
+<body style="width: 80%; margin: 0 auto">
+    <header>
+        <h1 style ="text-align:center">Angular Directives</h1> </header>
+    <div ng-controller="westController as controller" style="float: left">
+        <h3 style ="text-align:center">Add Western Countries</h3>
+        <input type="text" placeholder="COUNTRY" ng-model="controller.country">
+        <input type="text" placeholder="PRICE" ng-model="controller.price">
+        <input type="button" value="ADD" ng-click="controller.addCountry(controller.country, controller.price);">
+        <countries-list></countries-list>
+        <div>
+            <error-message></error-message>
+        </div>
+    </div>
+    <div ng-controller="asiaController as controller" style="float: right">
+        <h3 style ="text-align:center">Add Asian Countries</h3>
+        <input type="text" placeholder="ASIAN COUNTRY" ng-model="controller.country">
+        <input type="text" placeholder="PRICE" ng-model="controller.price">
+        <input type="button" value="ADD" ng-click="controller.addCountry(controller.country, controller.price);">
+        <countries-list></countries-list>
+        <div>
+            <error-message></error-message>
+        </div>
+    </div>
+</body>
+
+</html>
