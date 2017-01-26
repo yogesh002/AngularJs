@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="isolateApp">
+
+<head>
+    <title>Isolaate Scope in AngularJs</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Assignment 3: Search Menu Item Description using resturant Server REST API">
+    <meta name="keywords" content="HTML, AngularJs, CSS, Bootstrap">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="javascript/app.js"></script>
+</head>
+
+<body>
+    <h1>Isolate Scopes, Link Function, and Transclude in AngularJs </h1>
+    <div ng-controller="isolateControllerOne as controllerOne">
+        <isolate-directive controller-attribute="controllerOne" title-attribute="This is title from controller one" get-time="controllerOne.time()"></isolate-directive>
+    </div>
+    <div ng-controller="isolateControllerTwo as controllerTwo">
+        <isolate-directive controller-attribute="controllerTwo" title-attribute="This is title from controller two" get-time="controllerTwo.time();">
+            <!-- *********************************************INSIDE THE CUSTOM DIRECTIVE i.e isolate-directive OPENING BRACKET AND CLOSING BRACKET *********************************-->
+            <!--the beauty of transclude is that we can get access to parent controller/scope and send that information to the directive like below for example" -->
+            <h1>I am {{controllerTwo.header}}</h1>
+            <div> Anything I write inside the opening and closing of my custom directive can be sent as a whole to the directive writing
+                <ol>
+                    <li>Information must be written inside the opening and closing bracket of <strong>custom directive</strong> we defined.</li>
+                    <li>Can get access to parent controller and send that information to directive</li>
+                    <li> 'transclude : true' in isolate scope in the javascript.</li>
+                    <li>Inside directive, to accept these information, there must be <strong>'ng-transclude'</strong> defined.</li>
+                </ol>
+            </div>
+            <!-- *********************************************INSIDE THE CUSTOM DIRECTIVE i.e  i.e isolate-directive OPENING BRACKET AND CLOSING BRACKET ****************************-->
+        </isolate-directive>
+    </div>
+</body>
+
+</html>

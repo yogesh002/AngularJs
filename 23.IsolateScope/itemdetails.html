@@ -1,0 +1,13 @@
+<!--NOTE: 'controller' is generic. In our context, it can represent controllerOne or controllerTwo -->
+<h3>Inside the directive. Getting header from : <strong>{{controller.header}}</strong></h3>
+<span>Title is: {{title}}</span>
+Current time : 
+<input type="button" value="Show time" ng-click="time()"> 
+<span>{{controller.updatedTime}}</span>
+
+<!--NOTE: directiveController is passed from controller that we defined separately. Since controllerAs = 'directiveController', we passed it here as directiveController. More information can be found in javascript. -->
+{{directiveController.detail}}
+
+*****************************************************************
+<span>To demonstrate ng-transclude: </span>
+<div ng-transclude></div>
