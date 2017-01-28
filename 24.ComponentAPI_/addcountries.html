@@ -1,0 +1,9 @@
+<h1>Title is: {{$ctrl.title}}</h1>
+
+<div>
+    <ol>
+        <li ng-repeat="country in $ctrl.countryObj"> {{country.name}}
+            <input type="button" value="Remove with mapping done in template html " ng-click="$ctrl.removeCountry({$index:index})">
+            <input type="button" value="Remove with mapping done inside controller function and not in template html" ng-click="$ctrl.removeCountryFunction($index)"> </li>
+    </ol>
+</div>
