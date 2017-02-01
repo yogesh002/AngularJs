@@ -1,0 +1,19 @@
+/*@author : Yogesh Ghimire*/
+
+.navigation > span {
+    padding: 50px;
+}
+
+#tigerImg {
+    width: 40%;
+}
+
+.link:hover {
+    color: brown;
+    cursor: pointer;
+}
+
+.link {
+    color: blue;
+    text-decoration: underline;
+}

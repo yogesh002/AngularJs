@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="moduleApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="First Angular App">
+    <meta name="keywords" content="HTML, Javascript, AngularJs">
+    <meta name="author" content="Yogesh Ghimire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJs Template</title>
+</head>
+
+<body ng-controller="moduleController as controller" id="body">
+    <h1>TITLE</h1>
+    <div>
+        <input type="text" placeholder="Enter item" ng-model="controller.item">
+        <input type="text" placeholder="Enter price" ng-model="controller.price"> 
+        <input type="button" placeholder="Add" value= "ADD" ng-click="addItem();"> 
+    </div>
+    
+    <!-------------------------- CSS-------------------------------->
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <!-------------------------- Libraries ------------------------->
+    <script src="/lib/angular.min.js"></script>
+    <script src="/lib/angular-ui-router.min.js"></script>
+    <!-------------------------- Zoo Module ------------------------->
+    <script src="src/javascript/app.module.js"></script>
+    <!--------------------------- Zoo Artifacts --------------------->
+    <script src="src/javascript/app.service.js"></script>
+    <script src="src/javascript/app.component.js"></script>
+    <script src="src/javascript/app.controller.js"></script>
+    <!---------------------------- Router ----------------------------->
+    <script src="src/route.js"></script>
+</body>
+
+</html>
