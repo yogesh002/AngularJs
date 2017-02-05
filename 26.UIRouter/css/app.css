@@ -4,7 +4,8 @@
     padding: 50px;
 }
 
-#tigerImg, #butterflyImg {
+#tigerImg,
+#butterflyImg {
     width: 40%;
 }
 
@@ -18,6 +19,7 @@
     text-decoration: underline;
 }
 
-#plant, #insect{
+#plant,
+#insect {
     float: left;
 }
