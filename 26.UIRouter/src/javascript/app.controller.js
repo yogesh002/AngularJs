@@ -12,8 +12,11 @@
 
     function PlantsController() {
         var plantsCtrl = this;
+        plantsCtrl.plantsDetails = [{name: "rose", color: "red", smell : "sweet"}];
         plantsCtrl.title = "Welcome to Plants Section...";
         plantsCtrl.imgSrc = "images/rose.jpg";
+        //INSECTS
+        plantsCtrl.insects = [{name: "butterfly", color:"yellow", smell: "bad"}]
     }
 
     function HomeController() {

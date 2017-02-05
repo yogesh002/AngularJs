@@ -4,7 +4,7 @@
     padding: 50px;
 }
 
-#tigerImg {
+#tigerImg, #butterflyImg {
     width: 40%;
 }
 
@@ -16,4 +16,8 @@
 .link {
     color: blue;
     text-decoration: underline;
+}
+
+#plant, #insect{
+    float: left;
 }
