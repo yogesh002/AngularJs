@@ -1,25 +1,23 @@
 /*@author : Yogesh Ghimire*/
 
-.navigation > span {
+.navigation>span {
     padding: 50px;
 }
 
-#tigerImg,
-#butterflyImg {
+#tigerImg, #butterflyImg {
     width: 40%;
 }
 
-.link:hover {
+.link:hover, #plants:hover {
     color: brown;
     cursor: pointer;
 }
 
-.link {
+.link, #plants {
     color: blue;
     text-decoration: underline;
 }
 
-#plant,
-#insect {
+#plant, #insect {
     float: left;
 }

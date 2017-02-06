@@ -1,7 +1,8 @@
+<!--@author: Yogesh Ghimire -->
 <h1>{{displayPlantsCtrl.title}}</h1>
 <div>
     <ul>
-        <li ng-repeat="plant in displayPlantsCtrl.allPlants" ui-sref="plantDetails({plantId : $index})">
+        <li ng-repeat="plant in displayPlantsCtrl.allPlants" ui-sref="plantDetails({plantId : $index})" id="plants">
             {{plant.name}}
         </li>
     </ul>

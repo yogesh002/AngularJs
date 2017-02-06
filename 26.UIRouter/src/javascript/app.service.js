@@ -1,3 +1,6 @@
+/*
+ *@author: Yogesh Ghimire
+ */
 (function() {
     angular.module("moduleApp").service("plantDetailService", PlantDetailService);
 
