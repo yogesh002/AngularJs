@@ -20,6 +20,29 @@
         controller: insectDetails
     });
 
+    //3. spinner
+    angular.module("moduleApp").component("spinner", {
+        templateUrl: "template/spinner.html",
+        bindings: {
+            status: "<"
+        },
+        controller: SpinnerController
+
+    });
+
+
+    SpinnerController.$inject = ["$rootScope"]
+
+    function SpinnerController($rootScope) {
+        var $ctrl = this;
+        var spin = $rootScope.$on("spinner", function(event, data) {
+            $ctrl.status = data.spin;
+        });
+        $ctrl.$onDestroy = function() {
+            return spin();
+        }
+    }
+
     function roseController() {
         var roseCtrl = this;
         roseCtrl.title = "ROSE DETAILS...";
