@@ -1,8 +1,9 @@
 <!--@author: Yogesh Ghimire --><span ui-sref="home" class="link">Home</span>
 <div>
-    <h1>{{plantsCtrl.title}} </h1> 
+    <h1>{{plantsCtrl.title}} </h1>
 </div>
 <div>
+    <!--Defining COMPONENTS inside the template. Since they all belong to the same module, they are registered in app.component.js-->
     <plant-details plant-details="plantsCtrl.plantsDetails" path="{{plantsCtrl.imgSrc}}"></plant-details>
     <insect-details insects="plantsCtrl.insects"></insect-details>
 </div>

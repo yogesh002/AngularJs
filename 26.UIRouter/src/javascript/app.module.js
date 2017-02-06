@@ -1,6 +1,6 @@
 /*
  *@author: Yogesh Ghimire
  */
-(function () {
+(function() {
     angular.module("moduleApp", ["ui.router"]);
 })();
